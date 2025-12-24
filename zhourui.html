@@ -1,0 +1,392 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>个人简历</title>
+    <!-- 引入Font Awesome图标库，解决图标显示问题 -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            padding: 100px 6%;
+            background: linear-gradient(to right top, #ff1493, #2980b9);
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .profile {
+            padding: 20px 30px;
+            height: 230px;
+            background: #FFFFFF;
+            text-align: center;
+            flex: 1 1 400px;
+            position: sticky;
+            top: 20px;
+            border-right: 2px solid #333333;
+        }
+
+        .profile h3 {
+            font-size: 20px;
+        }
+
+        .profile p {
+            color: #2980b9;
+            margin-bottom: 16px;
+            font-size: 15px;
+        }
+
+        .btn {
+            padding: 7px 20px;
+            border-radius: 5px;
+            background: #2980b9;
+            color: #FFFFFF;
+            font-size: 17px;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: #333333;
+        }
+
+        .information {
+            padding: 20px 30px;
+            flex: 1 1 1000px;
+            background: #FFFFFF;
+        }
+
+        .title {
+            font-size: 25px;
+            color: #2980b9;
+            margin-bottom: 15px;
+        }
+
+        .about p {
+            font-size: 17px;
+            line-height: 2;
+            padding-bottom: 10px;
+            color: #777777;
+        }
+
+        .about .box-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .about .box-container .box {
+            flex: 1 1 250px;
+        }
+
+        .about .box-container .box h3 {
+            font-size: 15px;
+            padding: 10px 0;
+            color: #333333;
+        }
+
+        .about .box-container .box h3 span {
+            color: #777777;
+        }
+
+        .services {
+            padding: 20px 0;
+        }
+
+        .imgbox-container {
+            display: flex;
+        }
+
+        .imgbox-container .box {
+            flex: 1 1 17px;
+            text-align: center;
+            border-radius: 5px;
+            padding: 20px;
+            background: #eeeeee;
+            margin-right: 12px;
+        }
+
+        .imgbox-container .box img {
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        .imgbox-container .box h3 {
+            font-size: 15px;
+            color: #777777;
+        }
+
+        .skills .box-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .skills .box-container .box {
+            flex: 1 1 300px;
+        }
+
+        .skills .box-container .box:last-child {
+            margin-left: 12px;
+        }
+
+        .progress h3 {
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            color: #333333;
+            font-size: 15px;
+        }
+
+        .progress h3 span {
+            color: #777777;
+        }
+
+        .bar {
+            overflow: hidden;
+            border-radius: 50px;
+            height: 10px;
+            background: #eeeeee;
+        }
+
+        .bar span {
+            background: #2980b9;
+            height: 100%;
+            display: block;
+            border-radius: 50px;
+        }
+
+        .first {
+            width: 95%;
+        }
+
+        .second {
+            width: 80%;
+        }
+
+        .third {
+            width: 65%;
+        }
+
+        .fourth {
+            width: 70%;
+        }
+
+        .fifth {
+            width: 90%;
+        }
+
+        .sixth {
+            width: 75%;
+        }
+
+        .experience {
+            margin: 20px 0;
+        }
+
+        .experience .box-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .experience .box-container .box {
+            padding: 20px;
+            border-radius: 5px;
+            flex: 1 1 350px;
+            background: #eeeeee;
+        }
+
+        .experience .box-container .box span {
+            color: #2980b9;
+            font-size: 15px;
+        }
+
+        .experience .box-container .box h3 {
+            color: #333333;
+            font-size: 17px;
+            padding: 5px 0;
+        }
+
+        .experience .box-container .box p {
+            color: #777777;
+            line-height: 2;
+            font-size: 13px;
+        }
+
+        .contact .box-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .contact .box-container .box {
+            flex: 1 1 200px;
+            display: flex;
+        }
+
+        .contact .box-container .box i {
+            height: 40px;
+            width: 40px;
+            line-height: 40px;
+            font-size: 15px;
+            border-radius: 50%;
+            background: #2980b9;
+            color: #FFFFFF;
+            text-align: center;
+            margin-top: 14px;
+        }
+
+        .contact .box-container .box h3 {
+            font-size: 17px;
+            color: #333333;
+            padding-bottom: 5px;
+        }
+
+        .contact .box-container .box p {
+            font-size: 14px;
+            color: #777777;
+            line-height: 2;
+        }
+
+        .info {
+            padding-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="profile">
+            <img src="https://s41.ax1x.com/2025/12/24/pZG4F81.jpg" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%;" alt="">
+            <h3>周锐先生</h3>
+            <p>超影</p>
+            <div class="buttons">
+                <a class="btn" href="javascript:alert('你什么档次也配看我的简历');">下载简历</a>
+                <a class="btn" href="https://fffahrenheit.github.io/zhourui_number/">月到周锐先生</a>
+            </div>
+        </div>
+
+        <div class="information">
+
+            <div class="about">
+                <h3 class="title">About Me</h3>
+                <p>我乃武汉街球王周锐</p>
+                <p>你说白了你有啥实力啊，不服对掏</p>
+                <div class="box-container">
+                    <div class="box">
+                        <h3><span>年龄 : </span>20</h3>
+                        <h3><span>地址 : </span>四川，泸州</h3>
+                        <h3><span>电话 : </span>183*****373</h3>
+                        <h3><span>邮箱 : </span>骗你的，我没有邮箱</h3>
+                    </div>
+                    <div class="box">
+                        <h3><span>求爱 : </span>许愿一个小美</h3>
+                        <h3><span>语言 : </span>Japanese 火の意志！！！</h3>
+                        <h3><span>村龄 : </span>18 年</h3>
+                        <h3><span>现状 : </span>依旧守护村子</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services">
+                <h3 class="title">My Services</h3>
+                <div class="imgbox-container">
+                    <div class="box">
+                        <img src=https://picb9.photophoto.cn/09/162/09162549_1.jpg alt="">
+                        <h3>うちは サスケ</h3>
+                    </div>
+                    <div class="box">
+                        <img src=https://pic3.zhimg.com/v2-ae55e8bbf89ef4f2fa2b0d1cc6d5f88c_r.jpg alt="">
+                        <h3>うちは イタチ</h3>
+                    </div>
+                    <div class="box">
+                        <img src=https://ts1.tc.mm.bing.net/th/id/R-C.7ea6589ed646bc46439c236e5e85d307?rik=dcduaWBiuhqeug&riu=http%3a%2f%2fwww.capablist.com%2fCellFile%2f641159904197.jpeg&ehk=WhVviMj5tWbKIL5cSxSOX1hRpCe%2bqjDutQV1kBxrbBA%3d&risl=&pid=ImgRaw&r=0 alt="">
+                        <h3>うずまき ナルト</h3>
+                    </div>
+                    <div class="box">
+                        <img src=https://tse3-mm.cn.bing.net/th/id/OIP-C.m8pCHxUSWeOvihHHRKpIkwHaNK?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3 alt="">
+                        <h3>うちは オビト</h3>
+                    </div>
+                    <div class="box">
+                        <img src=https://ts4.tc.mm.bing.net/th/id/OIP-C.-amg838sxItBiJw460SQKwHaMb?rs=1&pid=ImgDetMain&o=7&rm=3 alt="">
+                        <h3>なみかぜ ミナト</h3>
+                    </div>
+                    <div class="box">
+                        <img src=https://tse3-mm.cn.bing.net/th/id/OIP-C.6IeO6YemJfqVsvHBTshNGQHaNJ?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3 alt="">
+                        <h3>はたけ カカシ</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills">
+                <h3 class="title">My Skills</h3>
+                <div class="box-container">
+                    <div class="box">
+                        <div class="progress">
+                            <h3>火影忍者 <span>95%</span></h3>
+                            <div class="bar"><span class="first"></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>单片机大王 <span>80%</span></h3>
+                            <div class="bar"><span class="second"></span></div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="progress">
+                            <h3> <span>健身</span>90%</h3>
+                            <div class="bar"><span class="fifth"></span></div>
+                        </div>
+                        <div class="progress">
+                          <h3>撩妹 <span>0%</span></h3>
+                          <div class="bar"><span style="width: 0%"></span></div> <!-- 直接写0%，进度条就消失了 -->
+                          <p>（呜呜呜）</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience">
+                <h3 class="title">My Experience</h3>
+                <div class="box-container">
+                    <div class="box">
+                        <span>2020 - 2022</span>
+                        <h3>超级赛亚人初级版</h3>
+                        <p>呜呜呜，大美你不要走qwq</p>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact">
+                <h3 class="title">Contact Info</h3>
+                <div class="box-container">
+                    <div class="box">
+                        <i class="fas fa-map"></i>
+                        <div class="info">
+                            <h3>微信</h3>
+                            <p>coooo</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <i class="fas fa-phone"></i>
+                        <div class="info">
+                            <h3>My Number</h3>
+                            <p>不给你说</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <i class="fas fa-envelope"></i>
+                        <div class="info">
+                            <h3>My Email</h3>
+                            <p>都说了我没有邮箱</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
